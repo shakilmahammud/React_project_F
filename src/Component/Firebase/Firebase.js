@@ -1,3 +1,5 @@
+import fire from 'firebase'
+
 const firebaseConfig = {
     apiKey: "AIzaSyBsAkbn3XR6Spfyaa-n7XnNznjFXu4AD0A",
     authDomain: "facebook-clone-e0681.firebaseapp.com",
@@ -7,4 +9,7 @@ const firebaseConfig = {
     messagingSenderId: "677503138480",
     appId: "1:677503138480:web:d9903e85d40ccca6f01975",
     measurementId: "G-YCF2LF301E"
-  };
+  }
+  const fire =firebase.initializeApp(firebaseConfig);
+  export default fire;
+ 

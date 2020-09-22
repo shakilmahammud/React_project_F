@@ -16,7 +16,6 @@ const Header = () => {
     return (
         <div className='header'>
             <div className="header_left">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt=""/>
                 <div className="header_input">
                     <SearchIcon/>
                 <input type="text" placeholder="Search Facebook"/>
