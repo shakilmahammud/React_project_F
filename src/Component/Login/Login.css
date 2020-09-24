@@ -4,9 +4,16 @@
     height: 100vh;
 }
 .login button{
-    background-color: #c6cacf;
+    background-color: #2e81f4;
     color:#eff2f5;
     font-weight:800;
+}
+.login button .MuiSvgIcon-root{
+    color:#fff;
+    padding: 5px;
+}
+.login button:hover .MuiSvgIcon-root{
+    color: #2e81f4;
 }
 .login button:hover{
     background: #fff;
@@ -14,7 +21,13 @@
 }
 .login >div>img{
     object-fit: contain;
-    height: 150px;
+    height: 120px;
+}
+.login_logo .img{
+    border-radius: 50%;
+    height: 120px;
+    width:120px;
+    margin-left: 20px;
 }
 .login >div{
     display: flex;

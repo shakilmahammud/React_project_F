@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
@@ -11,8 +11,10 @@ import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { userContext } from '../../App';
 
 const Header = () => {
+    const [loggedIn,setLoggedIn]=useContext(userContext);
     return (
         <div className='header'>
             <div className="header_left">
@@ -55,8 +57,21 @@ const Header = () => {
 
             <div className="header_right">
                 <div className="header_info">
+                  {loggedIn ?
+                  ( 
+                  <>
                     <Avatar/>
-                    <h4>SHAKIL Mahammud</h4>
+                    <h4>{loggedIn.name}</h4>
+                  </>)
+                  :
+                    (
+                     <>
+                       <Avatar/>
+                    <h4>SHAKIL MAHAMMUD</h4>
+                      </>
+                        )
+                    
+                  }
                 </div>
                 <IconButton>
                 <AddIcon fontSize="large"/>
